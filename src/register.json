@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": "324c",
+      "firstName": "Test",
+      "lastName": "User",
+      "email": "user@gmail.com",
+      "password": "test123",
+      "confirmPassword": "test123",
+      "userType": "doctor",
+      "doctorID": "12344567884"
+    },
+    {
+      "id": "4ea5",
+      "firstName": "check",
+      "lastName": "re",
+      "email": "check@gmail.com",
+      "password": "asfdsa",
+      "confirmPassword": "asfdasf",
+      "userType": "doctor",
+      "doctorID": "3454546665566"
+    },
+    {
+      "id": "8a94",
+      "firstName": "next",
+      "lastName": "js",
+      "email": "next@gmail.com",
+      "password": "afssaf",
+      "confirmPassword": "afdas",
+      "userType": "patient",
+      "doctorID": ""
+    },
+    {
+      "id": "87b0",
+      "firstName": "test",
+      "lastName": "test122",
+      "email": "raj@gmail.com",
+      "password": "afa",
+      "confirmPassword": "sfdsaf",
+      "userType": "patient",
+      "doctorID": ""
+    },
+    {
+      "id": "cec6",
+      "firstName": "test",
+      "lastName": "test12",
+      "email": "test@gmail.com",
+      "password": "tet12",
+      "confirmPassword": "test122",
+      "userType": "doctor",
+      "doctorID": "123345663344"
+    }
+  ]
+}

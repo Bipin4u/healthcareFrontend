@@ -9,10 +9,12 @@ import {
   Link,
   Box,
 } from '@mui/material';
+import axios from 'axios';
 
 const Login: React.FC = () => {
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
+    const [error, setError] = useState<boolean>(false);
 
     const navigate = useNavigate();
 
@@ -20,11 +22,31 @@ const Login: React.FC = () => {
         navigate('/registration');
     };
 
-  const handleLogin = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Handle login logic here
-    console.log('Email:', email);
-    console.log('Password:', password);
+    try {
+      const config = {
+        headers: {
+          "Authorization": "Bearer test12344"
+        }
+      }
+      const response = await axios.get('http://localhost:3000/users', config);
+      const users = response.data;
+
+      const user = users.find((u: { email: string; password: string }) => u.email === email && u.password === password);
+
+      if (user) {
+        // Redirect to a welcome page or another route
+        navigate('/doctor');
+      } else {
+        //setError('Invalid email or password');
+        setError(true);
+      }
+    } catch (error) {
+      console.error('Error logging in', error);
+      setError(true);
+    }
   };
 
   return (
@@ -58,6 +80,7 @@ const Login: React.FC = () => {
             autoComplete="current-password"
             onChange={(e) => setPassword(e.target.value)}
           />
+          {error && <p style={{color: "red"}}>Email and Password are incorrect</p>}
           <Button
             type="submit"
             fullWidth

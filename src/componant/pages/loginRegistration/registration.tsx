@@ -1,5 +1,5 @@
 // Register.tsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   Link,
@@ -13,6 +13,7 @@ import {
   Select,
   MenuItem,
 } from '@mui/material';
+import axios from 'axios';
 
 const Register: React.FC = () => {
   const [firstName, setFirstName] = useState<string>('');
@@ -23,27 +24,54 @@ const Register: React.FC = () => {
   const [userType, setUserType] = useState<string>(''); // Default to 'patient'
   const [doctorID, setDoctorID] = useState<string>('');
   const [error, setError] = useState<boolean>(false);
+  const [success, setSuccess] = useState<boolean>(false);
 
   const navigate = useNavigate();
+
+  useEffect(()=> {
+    const fetchDoctorsIds = async () => {
+      try {
+        const response = await axios.get('http://localhost:3001/doctorids');
+        console.log("fetchdatares", response.data);
+      } catch (err) {
+        console.log("fetchdata", err);
+        //setError(err);
+      } finally {
+        //setLoading(false);
+      }
+    }
+    fetchDoctorsIds();
+  }, [])
 
     const goToLogin = () => {
         navigate('/login');
     };
 
-  const handleRegister = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleRegister = async  (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Handle registration logic here
-    console.log('First Name:', firstName);
-    console.log('Last Name:', lastName);
-    console.log('Email:', email);
-    console.log('Password:', password);
-    console.log('Confirm Password:', confirmPassword);
-    console.log('User Type:', userType);
-    console.log('DoctorID:', doctorID);
-    if(doctorID.length < 11) {
+    if(userType === "doctor" && doctorID.length < 11) {
         setError(true);
     }
+    if(userType === "patient") {
+      setError(true);
+    }
     if(error){
+      try {
+        const user = {
+          firstName,
+          lastName, 
+          email,
+          password,
+          confirmPassword,
+          userType, 
+          doctorID
+        }
+        await axios.post('http://localhost:3000/users', user);
+        setSuccess(true);
+      } catch (error) {
+        console.error('Error submitting the form', error);
+      }
     setFirstName("");
     setLastName("");
     setEmail("");
@@ -143,7 +171,7 @@ const Register: React.FC = () => {
               onChange={checkDoctorID}
             />
           )}
-          {error && <p style={{color: "red"}}>Please Enter the correct Doctor ID</p>}
+          {userType === "doctor" && error && <p style={{color: "red"}}>Please Enter the correct Doctor ID</p>}
           <Button
             type="submit"
             fullWidth
