@@ -1,18 +1,14 @@
-// src/App.tsx
-
 import React from 'react';
-import { CssBaseline } from '@mui/material';
-import Main from './Main';
-import Header from './Header';
+import logo from './logo.svg';
+import './App.css';
+import UpcomingAppointments from './componant/pages/patient/PatientDashboaed';
 
-const App: React.FC = () => {
+function App() {
   return (
-    <>
-      <CssBaseline />
-      <Header />
-      <Main />
-    </>
+    <div className="App">
+      <UpcomingAppointments />
+    </div>
   );
-};
+}
 
 export default App;
