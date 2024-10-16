@@ -1,12 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import UpcomingAppointments from './componant/pages/patient/PatientDashboaed';
+import Login from './componant/pages/loginRegistration/login';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Register from "./componant/pages/loginRegistration/registration";
+import Dashboard from './componant/pages/Doctor/pages/Dashboard';
+import Appointment from "./componant/pages/patient/Appointment";
+import UpcomingAppointments from "./componant/pages/patient/PatientDashboaed";
+import PreviousHistory from "./componant/pages/patient/PatientHistory";
 
 function App() {
   return (
     <div className="App">
-      <UpcomingAppointments />
+      <div className="App">
+      <Router>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/registration" element={<Register />} />
+          <Route path="/doctor" element={<Dashboard />} />
+          <Route path="/appointment" element={<Appointment />} />
+          <Route path="/patientDashboard" element={<UpcomingAppointments />} />
+          <Route path="/patientHistory" element={<PreviousHistory />} />
+
+          {/* <Route path="/patient" element={<UpcomingAppointments />} /> */}
+        </Routes>
+    </Router>
+    </div>
     </div>
   );
 }
