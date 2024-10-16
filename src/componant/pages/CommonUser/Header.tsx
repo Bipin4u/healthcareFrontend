@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
-import './styles.css'; // Import your CSS file
+// import './styles.css'; // Import your CSS file
 
 
 const Header: React.FC = () => {

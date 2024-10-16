@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Container, Typography, Grid, Card, CardContent, Button, Box } from '@mui/material';
-import healthTopics from './healthTopics.json'; // Adjust path as necessary
 
 
 const Main: React.FC = () => {

@@ -6,6 +6,8 @@ import Dashboard from './componant/pages/Doctor/pages/Dashboard';
 import Appointment from "./componant/pages/patient/Appointment";
 import UpcomingAppointments from "./componant/pages/patient/PatientDashboaed";
 import PreviousHistory from "./componant/pages/patient/PatientHistory";
+import Header from "./componant/pages/commonuser/Header";
+import Main from "./componant/pages/commonuser/Main";
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
           <Route path="/appointment" element={<Appointment />} />
           <Route path="/patientDashboard" element={<UpcomingAppointments />} />
           <Route path="/patientHistory" element={<PreviousHistory />} />
+          <Route path="/Header" element={<Header />} />
+          <Route path="/Main" element={<Main />} />
+          
 
           {/* <Route path="/patient" element={<UpcomingAppointments />} /> */}
         </Routes>
