@@ -1,10 +1,10 @@
 .left-navigation {
     width: 200px;
-    background-color: #0099d7; /* Light blue background */
-    color: white; /* White text */
+    background-color: #0099d7;
+    color: white; 
     padding: 20px;
-    height: 100vh; /* Full height sidebar */
-    position: fixed; /* Fixed sidebar */
+    height: 100vh; 
+    position: fixed;
 }
 
 .left-navigation h6 {
@@ -24,7 +24,7 @@
 }
 
 .left-navigation li:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+    background-color: rgba(255, 255, 255, 0.2); 
     border-radius: 4px;
 }
 

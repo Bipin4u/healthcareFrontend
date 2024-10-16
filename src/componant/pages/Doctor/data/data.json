@@ -46,25 +46,8 @@
             "notes": "Consultation for allergy symptoms"
           }
         ]
-      },
-      {
-        "id": 3,
-        "name": "Mark Taylor",
-        "age": 38,
-        "gender": "Male",
-        "phone": "555-7890",
-        "email": "marktaylor@example.com",
-        "appointment_details": [
-          {
-            "appointment_id": 104,
-            "doctor_id": 1,
-            "doctor_name": "Dr. Emily Brown",
-            "date": "2024-10-22",
-            "time": "9:00 AM",
-            "status": "Confirmed",
-            "notes": "Physical therapy consultation"
-          }
-        ]
+      
+    
       }
     ],
     "doctors": [
