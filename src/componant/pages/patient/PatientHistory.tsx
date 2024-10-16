@@ -10,7 +10,6 @@ import {
   Button,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import patientMenu from "../common/patientMenu";
 
 interface Appointment {
   id: number;
