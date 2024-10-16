@@ -1,13 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// src/App.tsx
 
-function App() {
+import React from 'react';
+import { CssBaseline } from '@mui/material';
+import Main from './Main';
+import Header from './Header';
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <p>Home Page</p>
-    </div>
+    <>
+      <CssBaseline />
+      <Header />
+      <Main />
+    </>
   );
-}
+};
 
 export default App;
