@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.atag {
+  cursor: pointer;
+}
+
+.colorBlue {
+  color: #0099d7 !important;
+}
+
+.bggreen {
+  background-color: #8bc63f !important;
+}
