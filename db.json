@@ -1,0 +1,74 @@
+{
+    "patientAppointments": [
+        {
+            "id": 1,
+            "doctorName": "Dr. John Smith",
+            "patientName": "Alice Johnson",
+            "selectedDate": "2024-10-18",
+            "availableTimeSlot": "09:00 AM"
+        },
+        {
+            "id": 2,
+            "doctorName": "Dr. Emily Clark",
+            "patientName": "Michael Brown",
+            "selectedDate": "2024-10-19",
+            "availableTimeSlot": "10:00 AM"
+        },
+        {
+            "id": 3,
+            "doctorName": "Dr. Sarah Lee",
+            "patientName": "David Wilson",
+            "selectedDate": "2024-10-20",
+            "availableTimeSlot": "11:00 AM"
+        },
+        {
+            "id": 4,
+            "doctorName": "Dr. Robert Green",
+            "patientName": "Jessica Turner",
+            "selectedDate": "2024-10-21",
+            "availableTimeSlot": "01:00 PM"
+        },
+        {
+            "id": 5,
+            "doctorName": "Dr. Laura Brown",
+            "patientName": "Christopher Adams",
+            "selectedDate": "2024-10-22",
+            "availableTimeSlot": "03:00 PM"
+        },
+        {
+            "id": 6,
+            "doctorName": "Dr. Michael White",
+            "patientName": "Emily Davis",
+            "selectedDate": "2024-10-23",
+            "availableTimeSlot": "09:30 AM"
+        },
+        {
+            "id": 7,
+            "doctorName": "Dr. Linda Gray",
+            "patientName": "Daniel Miller",
+            "selectedDate": "2024-10-24",
+            "availableTimeSlot": "10:30 AM"
+        },
+        {
+            "id": 8,
+            "doctorName": "Dr. James Wilson",
+            "patientName": "Sophia Taylor",
+            "selectedDate": "2024-10-25",
+            "availableTimeSlot": "02:00 PM"
+        },
+        {
+            "id": 9,
+            "doctorName": "Dr. Patricia Martin",
+            "patientName": "Liam Thomas",
+            "selectedDate": "2024-10-26",
+            "availableTimeSlot": "11:30 AM"
+        },
+        {
+            "id": 10,
+            "doctorName": "Dr. Charles Hernandez",
+            "patientName": "Olivia Robinson",
+            "selectedDate": "2024-10-27",
+            "availableTimeSlot": "12:00 PM"
+        }
+    ]
+}
