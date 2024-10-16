@@ -1,0 +1,35 @@
+.left-navigation {
+    width: 200px;
+    background-color: #0099d7; /* Light blue background */
+    color: white; /* White text */
+    padding: 20px;
+    height: 100vh; /* Full height sidebar */
+    position: fixed; /* Fixed sidebar */
+}
+
+.left-navigation h6 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.left-navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-navigation li {
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.left-navigation li:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+    border-radius: 4px;
+}
+
+.left-navigation li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
